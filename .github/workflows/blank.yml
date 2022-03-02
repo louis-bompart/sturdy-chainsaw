@@ -24,7 +24,9 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
       - id: step1
-        run: node index.js
+        run: |
+          npm ci
+          node index.js
         
   job2:
     runs-on: ubuntu-latest
