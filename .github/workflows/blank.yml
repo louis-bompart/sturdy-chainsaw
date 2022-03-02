@@ -21,6 +21,8 @@ jobs:
     outputs:
       output1: ${{ steps.step1.outputs.wololo }}
     steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
       - id: step1
         run: node index.js
         
